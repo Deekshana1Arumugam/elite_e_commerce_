@@ -2,8 +2,6 @@ const Product = require('../models/Product');
 const { Op } = require('sequelize'); 
 const { calculateDiscount, paginate } = require('../utils/helpers');
 
-
-//add products
 const addProduct = async (req, res) => {
 
   try {
@@ -13,7 +11,6 @@ const addProduct = async (req, res) => {
    exdate.setDate(exdate.getDate() + 7);
    const expiry_date = Math.floor(exdate.getTime() / 1000);
 
-//    console.log(expiry_date,"expiry_date")
 
     const newProduct = await Product.create({
       name, description, category, old_price, new_price, image_url, vendor_id, expiry_date, product_url
@@ -25,7 +22,7 @@ const addProduct = async (req, res) => {
   }
 };
 
-//getAllProducts
+
 
 const getAllProducts = async (req, res) => {
     try {
@@ -39,13 +36,12 @@ const getAllProducts = async (req, res) => {
       if (search) {
         queryOptions.where = {
           [Op.or]: [
-            { name: { [Op.like]: `%${search}%` } },     // ✅ Search in name
-            { category: { [Op.like]: `%${search}%` } }  // ✅ Search in category
+            { name: { [Op.like]: `%${search}%` } },     
+            { category: { [Op.like]: `%${search}%` } }  
           ]
         };
       }
   
-      // Apply pagination
       const { count, rows: products } = await Product.findAndCountAll({
         ...queryOptions,
         limit,
@@ -79,7 +75,7 @@ const getAllProducts = async (req, res) => {
     }
   };
   
-//getAllProductsByVendorId
+
 const getProductByVendor = async (req, res) => {
   const { vendor_id } = req.params;
   try {

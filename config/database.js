@@ -1,14 +1,13 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
-// Set up the Sequelize connection using environment variables
 const sequelize = new Sequelize(
-  process.env.DB_NAME, // database name
-  process.env.DB_USER, // database user
-  process.env.DB_PASSWORD, // database password
+  process.env.DB_NAME, 
+  process.env.DB_USER, 
+  process.env.DB_PASSWORD, 
   {
-    host: process.env.DB_HOST, // database host
-    dialect: 'mysql', // database type (MySQL)
+    host: process.env.DB_HOST, 
+    dialect: 'mysql', 
   }
 );
 

@@ -2,12 +2,12 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-// Register a new user
-exports.signUpUser = async (req, res) => {
+
+exports.registerUser = async (req, res) => {
   try {
     const { user_name, email, phone, password, role, is_active } = req.body;
    
-    // Hash the password
+
     const hashedPassword = await bcrypt.hash(password, 10);
     
     const newUser = await User.create({
@@ -25,7 +25,6 @@ exports.signUpUser = async (req, res) => {
   }
 };
 
-// Login a user
 exports.loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -50,7 +49,7 @@ exports.loginUser = async (req, res) => {
   }
 };
 
-// Get all users
+
 exports.getAllUsers = async (req, res) => {
   try {
       
@@ -61,7 +60,7 @@ exports.getAllUsers = async (req, res) => {
   }
 };
 
-// Get a user by ID
+
 exports.getUserById = async (req, res) => {
   try {
     const user = await User.findByPk(req.params.user_id);
@@ -76,7 +75,7 @@ exports.getUserById = async (req, res) => {
   }
 };
 
-// Update a user
+
 exports.updateUser = async (req, res) => {
   try {
     const { user_name, email, phone, password, role, is_active } = req.body;
@@ -98,7 +97,7 @@ exports.updateUser = async (req, res) => {
   }
 };
 
-// Delete a user
+
 exports.deleteUser = async (req, res) => {
   try {
     const user = await User.findByPk(req.params.user_id);
