@@ -22,26 +22,28 @@ This project is a backend API for an e-commerce platform built using Node.js and
 ```
 ecommerce-api/
 ├── config/
-│   └── database.js        # Database connection
+│   └── database.js                                  # Database connection
 ├── controllers/
-│   ├── authController.js  # Handles authentication logic
-│   ├── productController.js # Handles product-related logic
-│   └── userController.js  # Handles user management logic
+│   ├── authController.js                            # Handles authentication logic
+│   ├── productController.js                         # Handles product-related logic
+│   └── userController.js                            # Handles user management logic
 ├── middleware/
-│   └── authMiddleware.js  # Role-based access control
+│   └── authMiddleware.js                            # Role-based access control
 ├── models/
-│   ├── Product.js         # Product schema
-│   ├── Role.js            # Role definitions (if needed for extension)
-│   └── User.js            # User schema
+│   ├── Product.js                                   # Product schema
+│   ├── Role.js                                      # Role definitions (if needed for extension)
+│   └── User.js                                      # User schema
 ├── routes/
-│   ├── authRoutes.js      # Authentication routes
-│   ├── productRoutes.js   # Product routes
-│   └── userRoutes.js      # User routes
+│   ├── authRoutes.js                                # Authentication routes
+│   ├── productRoutes.js                             # Product routes
+│   └── userRoutes.js                                # User routes
 ├── utils/
-│   └── helpers.js         # Utility functions (e.g., formatting, reusable logic)
-├── .env                   # Environment variables
-├── server.js              # Entry point for the application
-└── database.sql           # SQL file for schema
+│   └── helpers.js                                   # Utility functions (e.g., formatting, reusable logic)
+├── .env                                             # Environment variables
+├── server.js                                        # Entry point for the application
+├── e_commerce_website.postman_collection.json       #Postman collection         
+└── dbSchema.sql                                     # SQL file for schema
+
 ```
 
 ## Prerequisites
