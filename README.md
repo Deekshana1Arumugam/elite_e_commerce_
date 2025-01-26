@@ -56,7 +56,7 @@ ecommerce-api/
 
    ```bash
    git clone <repository-url>
-   cd ecommerce-api
+   cd elite_e_commerce_
    ```
 
 2. Install dependencies:
