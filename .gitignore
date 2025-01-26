@@ -1,0 +1,14 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Optional: Ignore IDE or editor-specific files (e.g., VS Code, WebStorm)
+.vscode/
+.idea/
+
+# Optional: Ignore build/coverage directories
+dist/
+build/
+coverage/
