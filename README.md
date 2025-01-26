@@ -41,7 +41,7 @@ ecommerce-api/
 │   └── helpers.js                                   # Utility functions (e.g., formatting, reusable logic)
 ├── .env                                             # Environment variables
 ├── server.js                                        # Entry point for the application
-├── e_commerce_website.postman_collection.json       #Postman collection         
+├── e_commerce_website.postman_collection.json       # Postman collection         
 └── dbSchema.sql                                     # SQL file for schema
 
 ```
@@ -109,5 +109,5 @@ ecommerce-api/
 - **GET** `/api/users` - Admin-only: List all users.
 
 ### NOTE
-- PFA Postman collection elite_e_commerce_postman_collection in the root of project.
+- PFA Postman collection e_commerce_website.postman_collection.json in the root of project.
 
