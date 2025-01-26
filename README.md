@@ -76,7 +76,7 @@ ecommerce-api/
    PORT=5000
    ```
 
-4. Import the database schema: Use the `database.sql` file to create the database and tables in MySQL.
+4. Import the database schema: Use the `dbSchema.sql` file to create the database and tables in MySQL.
 
    ```bash
    mysql -u <username> -p < database.sql
@@ -89,7 +89,7 @@ ecommerce-api/
    ```
 
 6. Test the API endpoints using Postman or similar tools.
-
+  - Postman collection is can be found in 
 ## API Endpoints
 
 ### Authentication
@@ -105,4 +105,7 @@ ecommerce-api/
 ### User Management
 
 - **GET** `/api/users` - Admin-only: List all users.
+
+### NOTE
+- PFA Postman collection elite_e_commerce_postman_collection in the root of project.
 
