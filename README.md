@@ -49,7 +49,7 @@ ecommerce-api/
 ## Prerequisites
 
 - Node.js (v16 or later)
-- MySQL
+- MySQL (workbench)
 - Postman (optional, for testing)
 
 ## Installation
@@ -70,18 +70,19 @@ ecommerce-api/
 3. Set up environment variables: Create a `.env` file in the root directory and add the following:
 
    ```env
+   PORT=3000
    DB_NAME=your_database_name
    DB_USER=your_database_user
    DB_PASSWORD=your_database_password
    DB_HOST=localhost
    JWT_SECRET=your_jwt_secret
-   PORT=5000
+   JWT_EXPIRES_IN=1d
    ```
 
 4. Import the database schema: Use the `dbSchema.sql` file to create the database and tables in MySQL.
 
    ```bash
-   mysql -u <username> -p < database.sql
+   mysql -u <username> -p < dbSchema.sql
    ```
 
 5. Start the server:
@@ -94,19 +95,11 @@ ecommerce-api/
   - Postman collection is can be found in 
 ## API Endpoints
 
-### Authentication
+### Authentication Api
 
-- **POST** `/api/auth/signup` - User signup (for buyers and vendors).
-- **POST** `/api/auth/login` - User login.
+### Product Api
 
-### Product Management
-
-- **POST** `/api/products` - Create a new product (admin, staff, vendor).
-- **GET** `/api/products` - List all products (paginated).
-
-### User Management
-
-- **GET** `/api/users` - Admin-only: List all users.
+### User Api
 
 ### NOTE
 - PFA Postman collection e_commerce_website.postman_collection.json in the root of project.
